@@ -26,5 +26,5 @@ The folder structure is defined in the config file.
 1. f: create folder
 2. t: create txt file
 3. m: create markdown file
-4. >  move down one directory
+4. \>  move down one directory
 5. <  move up one directory
