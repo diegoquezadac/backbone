@@ -10,26 +10,30 @@ import os
 from parser import get_variables, get_config
 
 def build_backbone():
-    # Set variables
+    # Get .conf data
     variables = get_variables()
     config = get_config()
+    # Unpack variables
     root = variables["root"]
     courses = variables["courses"]
+    # Map from string to list
     courses_list = courses.split(",")
+    # Define state variables
     folders = list()
     current_directory = ""
     for course in courses_list:
+        # Create course folder
         current_directory = f"{root}/{course}"
         os.mkdir(current_directory)
-        # Build backbone
+        # Build course backbone
         for bone in config:
-            # Mount bone
+            # Move down one directory
             if(">" in bone):
-                # Mount last folder
+                # Mount last bone
                 current_directory = f"{current_directory}/{folders[-1]}"
-            # Unmount bone
+            # Move up one directory)
             elif("<" in bone):
-                # Unmount last folder
+                # Unmount last bone
                 current_directory = "/".join(current_directory.split("/")[:-1])
             # Execute command
             else:
@@ -47,4 +51,6 @@ def build_backbone():
                     new_file.close()
                 else:
                     raise Exception(f"{command} is an unknown command. Only f,m and t commands are available.")
+
+# LET'S BUILD THAT THING
 build_backbone()
