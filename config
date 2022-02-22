@@ -1,0 +1,25 @@
+COMMANDS
+1. f: create folder
+2. t: create txt file
+3. m: create markdown file
+
+VARIABLES
+courses=INF-578,INF-396,INF-320,INF-360
+root=.
+
+BACKBONE
+m: info.md
+f: notes
+f: slides
+f: resources
+f: homeworks
+>
+	f: notebooks
+	f: documents
+	f: images
+<
+f: research
+>
+	f: notebooks
+	f: documents
+	f: images
