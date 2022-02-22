@@ -8,11 +8,11 @@ For now, Backbone can be used directly from the python script. To get started le
 
 ```
 git clone https://github.com/diegoquezadac/backbone.git
-cd ./backbone
-python backbone.py
+cd ./backbone/src
+python main.py
 ```
 
-The folder structure is defined in the config file. 
+The folder structure is defined in the .conf file. 
 
 # Configuration file
 
