@@ -1,0 +1,6 @@
+name: backbone
+dependencies:
+  - python=3.10
+  - pip=21.2
+  - pip:
+    - typer
