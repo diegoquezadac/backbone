@@ -23,6 +23,7 @@ def get_variables():
             break
     return variables
 
+
 def get_config():
     # Set variables
     file = open("../config/.conf", 'r')
