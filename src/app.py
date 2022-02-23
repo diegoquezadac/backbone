@@ -22,7 +22,7 @@ def build(root: Optional[str] = None):
 
 
 @app.command()
-def clean(root: Optional[str] = None):
+def destroy(root: Optional[str] = None):
     variables = get_variables()
     folders = variables["courses"].split(",")
     if(root is None):
