@@ -1,0 +1,2 @@
+# ignore python 3 bytecode cache
+src/__pycache__
