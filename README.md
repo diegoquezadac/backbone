@@ -4,15 +4,26 @@ Backbone is a Minimal Batch Folder Maker. It was created to **standardize the cr
 
 # Getting started
 
-For now, Backbone can be used directly from the python script. To get started let's create the folders associated with an academic semester:
+To get started let's clone the repo:
 
 ```
 git clone https://github.com/diegoquezadac/backbone.git
-cd ./backbone/src
-python main.py
+cd backbone/
 ```
 
-The folder structure is defined in the .conf file. 
+Now, let's create and activate the virtual environment as declared in the *environment.yml* file:
+
+```
+conda env create -f environment.yml
+conda activate backbone
+```
+
+Finally, let's create the folders associated with my academic semester:
+
+```
+cd /src
+python app.py build
+```
 
 # Configuration file
 
